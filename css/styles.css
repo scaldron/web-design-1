@@ -210,7 +210,7 @@ footer li:hover {
     display: inline-block;
   }
   
-  .cart {
+  nav .cart {
     text-align: right;
     width: 45%;
     margin: 0;
@@ -335,41 +335,34 @@ footer li:hover {
 
 /*** PICKUP ***/
 
-.pickup .content-container-pickup {
-	
-}
+@media screen and (min-width: 600px) {
+  .pickup .content-container-pickup .content-section {
+    display: flex;
+    border-bottom: 1px dashed; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 
-.pickup .content-container-pickup .content-section {
-	display: flex;
-	border-bottom: 1px dashed; 
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
+  .pickup .content-container-pickup .content-section div {
+    width: 33.3%;
+  }
 
-.pickup .content-container-pickup .content-section div {
-	width: 33.3%;
-}
+  .pickup .content-section .content-link {
+    position: relative;
+  }
 
-.pickup .content-section .content-link {
-	position: relative;
-}
-
-.pickup .content-section .content-link a {
-	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	transform: translate(-50%, -50%);
+  .pickup .content-section .content-link a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*** DELIVERY ***/
 
-.delivery .content-container-delivery {
-
-}
-
-.delivery .content-container-delivery div{
+.delivery .content-container-delivery div {
 	width: 50%;
-	
 }
 
 .delivery .content-container-delivery .content-lik a {
@@ -496,5 +489,29 @@ footer li:hover {
 
   .contact .input-container input {
     width: 70%;
+  }
+}
+
+/*** CART ***/
+
+@media screen and (min-width: 600px) {
+  .cart .content-container .content-section {
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .cart .content-container .content-section div {
+    width: 33.3%;
+  }
+
+  .cart .content-container .content-section p {
+    color :#96a2a4;
+  }
+
+  .cart .button-container button {
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
   }
 }
