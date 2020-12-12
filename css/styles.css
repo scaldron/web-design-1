@@ -210,7 +210,7 @@ footer li:hover {
     display: inline-block;
   }
   
-  .cart {
+  nav .cart {
     text-align: right;
     width: 45%;
     margin: 0;
@@ -335,41 +335,36 @@ footer li:hover {
 
 /*** PICKUP ***/
 
-.pickup .content-container-pickup {
-	
-}
+@media screen and (min-width: 600px) {
+  .pickup .content-container-pickup .content-section {
+    display: flex;
+    border-bottom: 1px dashed; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 
-.pickup .content-container-pickup .content-section {
-	display: flex;
-	border-bottom: 1px dashed; 
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
+  .pickup .content-container-pickup .content-section div {
+    width: 33.3%;
+  }
 
-.pickup .content-container-pickup .content-section div {
-	width: 33.3%;
-}
+  .pickup .content-section .content-link {
+    position: relative;
+  }
 
-.pickup .content-section .content-link {
-	position: relative;
-}
-
-.pickup .content-section .content-link a {
-	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	transform: translate(-50%, -50%);
+  .pickup .content-section .content-link a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*** DELIVERY ***/
 
-.delivery .content-container-delivery {
 
-}
-
-.delivery .content-container-delivery div{
+.delivery .content-container-delivery div {
+  position: relative;
 	width: 50%;
-	
 }
 
 .delivery .content-container-delivery .content-lik a {
@@ -386,14 +381,23 @@ footer li:hover {
 }
 
 .delivery .content-container-delivery div:last-child {
-  padding-left: 100px;
-  padding-top: 70px;
   width: 100%;
 }
 
 .delivery .hero2 img {
 	width: 100%;
   height: auto;
+}
+
+.delivery .content-container-delivery div:last-child a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);	
+}
+
+.delivery .content-container-delivery div:last-child a {
+  width: 100%;
 }
 
 @media screen and (min-width: 600px) {
@@ -496,5 +500,107 @@ footer li:hover {
 
   .contact .input-container input {
     width: 70%;
+  }
+}
+
+/*** CART ***/
+
+.cart .content-section div {
+  margin: 50px 0;
+}
+
+.cart .content-container input {
+  width: 10px;
+  padding: 10px;
+  border: 1px solid #96a2a4;
+}
+
+.cart .input-container {
+  position: relative;
+  display: block;
+  width: 30px;
+  margin: 0 auto;
+}
+
+.cart .content-image img {
+  margin: 0 auto;
+  display: block;
+}
+
+.cart .input-container::before {
+  content: '';
+  position: absolute;
+  right: -27px;
+  top: 38%;
+  display: block;
+  border-right: 2px solid #96a2a4;
+  border-bottom: 2px solid #96a2a4;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.cart .input-container::after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 62%;
+  display: block;
+  border-left: 2px solid #96a2a4;
+  border-top: 2px solid #96a2a4;
+  width: 10px;
+  height: 10px;
+  float: right;
+  transform: translate(50%, -50%) rotate(225deg);
+}
+
+.cart .button-container {
+  margin-top: 80px;
+}
+
+.cart .button-container button {
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  color: white;
+  background-color: #96a2a4;
+  padding: 14px;
+  font-size: 24px;
+  border-color: transparent;
+  border-radius: 6px;
+}
+
+.cart .content-container .content-section {
+  margin: 50px 0;
+}
+
+.cart .content-description p {
+  text-align: center;
+  color :#96a2a4;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .cart .content-section div {
+    margin: 0;
+  }
+
+  .cart .content-container .content-section {
+    display: flex;
+  }
+
+  .cart .content-container .content-section div {
+    width: 33.3%;
+    position: relative;
+  }
+
+  .cart .content-container .content-section p {
+    text-align: left;
+  }
+
+  .cart .centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);	
   }
 }
